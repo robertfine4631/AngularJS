@@ -6,9 +6,21 @@
   <link rel="stylesheet" href="css/vendor/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body ng-app="coolModule"> <!-- Tells which module is used -->
 
-  <div class="container">
+  <div class="container" ng-controller="CoolController">
+  
+  <form ng-submit="addTodo(task)">
+    <input type="text" placeholder="Enter Item" ng-model="task.item" />
+  </form>
+
+  <p>{{ remaining() }} item(s) to do!</p>
+
+  <hr />
+
+  <ul>
+    <li class="status-{{ todo.complete }}" ng-click="toggleStatus(todo)" ng-repeat="todo in allTasks">{{ todo.task}}</li>
+  </ul>
 
   </div>
 

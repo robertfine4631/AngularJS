@@ -1,0 +1,11 @@
+.container {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: cursive; }
+
+.status-true {
+  text-decoration: line-through; }
